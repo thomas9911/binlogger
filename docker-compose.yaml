@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  redis:
+    image: bitnami/redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - '6379:6379'
+
+  nats:
+    image: bitnami/nats
+    ports:
+      - 4222:4222
+      - 6222:6222
+      - 8222:8222
+    environment:
+      - NATS_USERNAME=nats

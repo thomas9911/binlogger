@@ -10,4 +10,6 @@ tokio = { version = "1", features = ["full"] }
 mysql_async = "0.30"
 futures = "0.3.21"
 circular-queue = "0.2.6"
-
+async-trait = "0.1.56"
+pubsubber = {git = "https://github.com/thomas9911/pubsubber-rust", branch = "main", features = ["redis"]}
+cfg-if = "1.0.0"
